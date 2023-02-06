@@ -1,11 +1,13 @@
 package com.example.soko.features.productslist
 
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.soko.data.ProductList
 import com.example.soko.databinding.ProductsItemsBinding
 
@@ -34,12 +36,19 @@ class ProductsAdapter: ListAdapter<ProductList, ProductsAdapter.ProductsViewHold
 //Products ViewHolder
     class ProductsViewHolder(private val binding:ProductsItemsBinding ):
         RecyclerView.ViewHolder(binding.root){
+        @SuppressLint("SetTextI18n")
         fun bind(productList: ProductList){
             binding.apply {
 
                txtTitle.text=productList.title
-                textPrice.text=productList.price.toString()
+                textPrice.text="$"+productList.price.toString()
                 textDescription.text=productList.description
+
+                //maPing the image on the imageView using Glide
+                val url:String=productList.image
+                Glide.with(itemView)
+                    .load(url)
+                    .into(imageView)
 
             }
 
