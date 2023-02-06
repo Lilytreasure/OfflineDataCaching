@@ -1,6 +1,9 @@
 package com.example.soko.di
 
+import android.app.Application
+import androidx.room.Room
 import com.example.soko.api.ProductsListApi
+import com.example.soko.data.ProductsDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,5 +30,10 @@ object AppModule {
         retrofit.create(ProductsListApi::class.java)
 
 
+    @Provides
+    @Singleton
+    fun provideDatabase(app: Application): ProductsDatabase=
+        Room.databaseBuilder(app,ProductsDatabase::class.java, name = "products_database")
+            .build()
 
 }
