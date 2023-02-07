@@ -4,12 +4,10 @@
 #Screen shots
 
 
-![soko (1)](https://user-images.githubusercontent.com/78819932/217171297-eedfd110-77dd-4ecd-a0d1-b95c4a947b0e.png)
-
 
  <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/78819932/217171297-eedfd110-77dd-4ecd-a0d1-b95c4a947b0e.png" alt="Home" style="width:250px;height:500px;"></td>
+    <td><img src="https://user-images.githubusercontent.com/78819932/217171297-eedfd110-77dd-4ecd-a0d1-b95c4a947b0e.png" alt="Home" style="width:280px;height:500px;"></td>
       
     
    
